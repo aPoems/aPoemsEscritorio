@@ -7,3 +7,12 @@ C:\Users\Miguel Mena\source\repos\aPoemsEscritorio\AccesoDatosAPI\obj\Debug\Acce
 C:\Users\Miguel Mena\source\repos\aPoemsEscritorio\AccesoDatosAPI\obj\Debug\AccesoDatosAPI.csproj.CopyComplete
 C:\Users\Miguel Mena\source\repos\aPoemsEscritorio\AccesoDatosAPI\obj\Debug\AccesoDatosAPI.dll
 C:\Users\Miguel Mena\source\repos\aPoemsEscritorio\AccesoDatosAPI\obj\Debug\AccesoDatosAPI.pdb
+C:\Users\Miguel Mena\Desktop\aPoems Escritorio Clone\aPoemsEscritorio\AccesoDatosAPI\bin\Debug\AccesoDatosAPI.dll
+C:\Users\Miguel Mena\Desktop\aPoems Escritorio Clone\aPoemsEscritorio\AccesoDatosAPI\bin\Debug\AccesoDatosAPI.pdb
+C:\Users\Miguel Mena\Desktop\aPoems Escritorio Clone\aPoemsEscritorio\AccesoDatosAPI\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Miguel Mena\Desktop\aPoems Escritorio Clone\aPoemsEscritorio\AccesoDatosAPI\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Miguel Mena\Desktop\aPoems Escritorio Clone\aPoemsEscritorio\AccesoDatosAPI\obj\Debug\AccesoDatosAPI.csproj.AssemblyReference.cache
+C:\Users\Miguel Mena\Desktop\aPoems Escritorio Clone\aPoemsEscritorio\AccesoDatosAPI\obj\Debug\AccesoDatosAPI.csproj.CoreCompileInputs.cache
+C:\Users\Miguel Mena\Desktop\aPoems Escritorio Clone\aPoemsEscritorio\AccesoDatosAPI\obj\Debug\AccesoDatosAPI.csproj.CopyComplete
+C:\Users\Miguel Mena\Desktop\aPoems Escritorio Clone\aPoemsEscritorio\AccesoDatosAPI\obj\Debug\AccesoDatosAPI.dll
+C:\Users\Miguel Mena\Desktop\aPoems Escritorio Clone\aPoemsEscritorio\AccesoDatosAPI\obj\Debug\AccesoDatosAPI.pdb

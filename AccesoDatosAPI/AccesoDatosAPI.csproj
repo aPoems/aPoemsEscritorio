@@ -45,10 +45,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccesoDatos.cs" />
+    <Compile Include="Post.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RespuestaBool.cs" />
+    <Compile Include="RespuestaLikePost.cs" />
+    <Compile Include="RespuestaVerPost.cs" />
+    <Compile Include="SolicitudComentarPost.cs" />
     <Compile Include="SolicitudIniciarSesion.cs" />
+    <Compile Include="SolicitudLikePost.cs" />
+    <Compile Include="SolicitudPublicarPost.cs" />
     <Compile Include="SolicitudRegistroUsuario.cs" />
+    <Compile Include="SolicitudVerPost.cs" />
+    <Compile Include="Usuario.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

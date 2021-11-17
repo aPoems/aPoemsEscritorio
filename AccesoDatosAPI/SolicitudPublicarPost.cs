@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace AccesoDatosAPI
 {
-    class RespuestaBool
+    class SolicitudPublicarPost
     {
-        public bool Resultado { get; set; }
-        public int IdUsuarioInicioSesion { get; set; }
+        public int IdUsuario { get; set; }
+        public string Contenido { get; set; }
     }
 }
