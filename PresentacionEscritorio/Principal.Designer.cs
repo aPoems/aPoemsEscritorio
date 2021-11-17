@@ -30,12 +30,6 @@ namespace PresentacionEscritorio
         private void InitializeComponent()
         {
             this.lblPost = new System.Windows.Forms.Label();
-            this.pnlPost1 = new System.Windows.Forms.Panel();
-            this.txtContenido = new System.Windows.Forms.TextBox();
-            this.lblComentarios = new System.Windows.Forms.Label();
-            this.lblLikes = new System.Windows.Forms.Label();
-            this.lblFechaPublicacion = new System.Windows.Forms.Label();
-            this.lblNickname = new System.Windows.Forms.Label();
             this.dgvPosts = new System.Windows.Forms.DataGridView();
             this.btnPublicarPost = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
@@ -43,8 +37,11 @@ namespace PresentacionEscritorio
             this.btnComentar = new System.Windows.Forms.Button();
             this.txtComentario = new System.Windows.Forms.TextBox();
             this.btnPublicarComentario = new System.Windows.Forms.Button();
-            this.pnlPost1.SuspendLayout();
+            this.btnVerComentarios = new System.Windows.Forms.Button();
+            this.dgvComentarios = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPosts)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvComentarios)).BeginInit();
             this.SuspendLayout();
             // 
             // lblPost
@@ -56,63 +53,6 @@ namespace PresentacionEscritorio
             this.lblPost.TabIndex = 0;
             this.lblPost.Text = "POST";
             // 
-            // pnlPost1
-            // 
-            this.pnlPost1.Controls.Add(this.txtContenido);
-            this.pnlPost1.Controls.Add(this.lblComentarios);
-            this.pnlPost1.Controls.Add(this.lblLikes);
-            this.pnlPost1.Controls.Add(this.lblFechaPublicacion);
-            this.pnlPost1.Controls.Add(this.lblNickname);
-            this.pnlPost1.Location = new System.Drawing.Point(26, 251);
-            this.pnlPost1.Name = "pnlPost1";
-            this.pnlPost1.Size = new System.Drawing.Size(454, 166);
-            this.pnlPost1.TabIndex = 0;
-            // 
-            // txtContenido
-            // 
-            this.txtContenido.Enabled = false;
-            this.txtContenido.Location = new System.Drawing.Point(15, 29);
-            this.txtContenido.Multiline = true;
-            this.txtContenido.Name = "txtContenido";
-            this.txtContenido.Size = new System.Drawing.Size(416, 110);
-            this.txtContenido.TabIndex = 4;
-            // 
-            // lblComentarios
-            // 
-            this.lblComentarios.AutoSize = true;
-            this.lblComentarios.Location = new System.Drawing.Point(74, 142);
-            this.lblComentarios.Name = "lblComentarios";
-            this.lblComentarios.Size = new System.Drawing.Size(71, 13);
-            this.lblComentarios.TabIndex = 3;
-            this.lblComentarios.Text = "Comentarios: ";
-            // 
-            // lblLikes
-            // 
-            this.lblLikes.AutoSize = true;
-            this.lblLikes.Location = new System.Drawing.Point(12, 142);
-            this.lblLikes.Name = "lblLikes";
-            this.lblLikes.Size = new System.Drawing.Size(38, 13);
-            this.lblLikes.TabIndex = 2;
-            this.lblLikes.Text = "Likes: ";
-            // 
-            // lblFechaPublicacion
-            // 
-            this.lblFechaPublicacion.AutoSize = true;
-            this.lblFechaPublicacion.Location = new System.Drawing.Point(378, 13);
-            this.lblFechaPublicacion.Name = "lblFechaPublicacion";
-            this.lblFechaPublicacion.Size = new System.Drawing.Size(13, 13);
-            this.lblFechaPublicacion.TabIndex = 1;
-            this.lblFechaPublicacion.Text = "--";
-            // 
-            // lblNickname
-            // 
-            this.lblNickname.AutoSize = true;
-            this.lblNickname.Location = new System.Drawing.Point(12, 13);
-            this.lblNickname.Name = "lblNickname";
-            this.lblNickname.Size = new System.Drawing.Size(13, 13);
-            this.lblNickname.TabIndex = 0;
-            this.lblNickname.Text = "--";
-            // 
             // dgvPosts
             // 
             this.dgvPosts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -123,7 +63,7 @@ namespace PresentacionEscritorio
             // 
             // btnPublicarPost
             // 
-            this.btnPublicarPost.Location = new System.Drawing.Point(496, 251);
+            this.btnPublicarPost.Location = new System.Drawing.Point(506, 295);
             this.btnPublicarPost.Name = "btnPublicarPost";
             this.btnPublicarPost.Size = new System.Drawing.Size(153, 23);
             this.btnPublicarPost.TabIndex = 2;
@@ -143,7 +83,7 @@ namespace PresentacionEscritorio
             // 
             // btnDarLike
             // 
-            this.btnDarLike.Location = new System.Drawing.Point(496, 280);
+            this.btnDarLike.Location = new System.Drawing.Point(506, 324);
             this.btnDarLike.Name = "btnDarLike";
             this.btnDarLike.Size = new System.Drawing.Size(153, 23);
             this.btnDarLike.TabIndex = 4;
@@ -153,7 +93,7 @@ namespace PresentacionEscritorio
             // 
             // btnComentar
             // 
-            this.btnComentar.Location = new System.Drawing.Point(496, 309);
+            this.btnComentar.Location = new System.Drawing.Point(506, 353);
             this.btnComentar.Name = "btnComentar";
             this.btnComentar.Size = new System.Drawing.Size(153, 23);
             this.btnComentar.TabIndex = 5;
@@ -163,7 +103,7 @@ namespace PresentacionEscritorio
             // 
             // txtComentario
             // 
-            this.txtComentario.Location = new System.Drawing.Point(665, 297);
+            this.txtComentario.Location = new System.Drawing.Point(684, 342);
             this.txtComentario.Multiline = true;
             this.txtComentario.Name = "txtComentario";
             this.txtComentario.Size = new System.Drawing.Size(144, 52);
@@ -172,7 +112,7 @@ namespace PresentacionEscritorio
             // 
             // btnPublicarComentario
             // 
-            this.btnPublicarComentario.Location = new System.Drawing.Point(665, 355);
+            this.btnPublicarComentario.Location = new System.Drawing.Point(684, 400);
             this.btnPublicarComentario.Name = "btnPublicarComentario";
             this.btnPublicarComentario.Size = new System.Drawing.Size(144, 23);
             this.btnPublicarComentario.TabIndex = 7;
@@ -181,11 +121,41 @@ namespace PresentacionEscritorio
             this.btnPublicarComentario.Visible = false;
             this.btnPublicarComentario.Click += new System.EventHandler(this.btnPublicarComentario_Click);
             // 
+            // btnVerComentarios
+            // 
+            this.btnVerComentarios.Location = new System.Drawing.Point(506, 382);
+            this.btnVerComentarios.Name = "btnVerComentarios";
+            this.btnVerComentarios.Size = new System.Drawing.Size(153, 23);
+            this.btnVerComentarios.TabIndex = 8;
+            this.btnVerComentarios.Text = "Ver comentarios";
+            this.btnVerComentarios.UseVisualStyleBackColor = true;
+            this.btnVerComentarios.Click += new System.EventHandler(this.btnVerComentarios_Click);
+            // 
+            // dgvComentarios
+            // 
+            this.dgvComentarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvComentarios.Location = new System.Drawing.Point(26, 267);
+            this.dgvComentarios.Name = "dgvComentarios";
+            this.dgvComentarios.Size = new System.Drawing.Size(464, 178);
+            this.dgvComentarios.TabIndex = 9;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(23, 242);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(65, 13);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Comentarios";
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(840, 457);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.dgvComentarios);
+            this.Controls.Add(this.btnVerComentarios);
             this.Controls.Add(this.btnPublicarComentario);
             this.Controls.Add(this.txtComentario);
             this.Controls.Add(this.btnComentar);
@@ -193,14 +163,12 @@ namespace PresentacionEscritorio
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnPublicarPost);
             this.Controls.Add(this.dgvPosts);
-            this.Controls.Add(this.pnlPost1);
             this.Controls.Add(this.lblPost);
             this.Name = "Principal";
             this.Text = "Principal";
             this.Load += new System.EventHandler(this.Principal_Load);
-            this.pnlPost1.ResumeLayout(false);
-            this.pnlPost1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPosts)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvComentarios)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -209,12 +177,6 @@ namespace PresentacionEscritorio
         #endregion
 
         private System.Windows.Forms.Label lblPost;
-        private System.Windows.Forms.Panel pnlPost1;
-        private System.Windows.Forms.TextBox txtContenido;
-        private System.Windows.Forms.Label lblComentarios;
-        private System.Windows.Forms.Label lblLikes;
-        private System.Windows.Forms.Label lblFechaPublicacion;
-        private System.Windows.Forms.Label lblNickname;
         private System.Windows.Forms.DataGridView dgvPosts;
         private System.Windows.Forms.Button btnPublicarPost;
         private System.Windows.Forms.Button btnActualizar;
@@ -222,5 +184,8 @@ namespace PresentacionEscritorio
         private System.Windows.Forms.Button btnComentar;
         private System.Windows.Forms.TextBox txtComentario;
         private System.Windows.Forms.Button btnPublicarComentario;
+        private System.Windows.Forms.Button btnVerComentarios;
+        private System.Windows.Forms.DataGridView dgvComentarios;
+        private System.Windows.Forms.Label label1;
     }
 }

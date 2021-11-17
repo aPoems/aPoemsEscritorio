@@ -232,6 +232,42 @@ namespace AccesoDatosAPI
             {
                 return "Error" + e.ToString();
             }
-        }   
+        }
+
+        public List<Comentario> VerComentarios(int idPost)
+        {
+            SolicitudVerComentarios req = new SolicitudVerComentarios();
+            req.IdPost = idPost;
+
+            string url = $"http://localhost:65004/api/VerComentarios";
+
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+            request.Method = "POST";
+            request.ContentType = "application/json";
+            request.Accept = "application/json";
+
+            string jsonAEnviar = JsonConvert.SerializeObject(req);
+
+            var streamWriter = new StreamWriter(request.GetRequestStream());
+            streamWriter.Write(jsonAEnviar);
+            streamWriter.Flush();
+            streamWriter.Close();
+
+            try
+            {
+                WebResponse response = request.GetResponse();
+                Stream streamReader = response.GetResponseStream();
+                StreamReader objReader = new StreamReader(streamReader);
+
+                string respuesta = objReader.ReadToEnd();
+                RespuestaVerComentarios resp = JsonConvert.DeserializeObject<RespuestaVerComentarios>(respuesta);
+
+                return resp.Resultado;
+            }
+            catch (Exception e)
+            {
+                return new List<Comentario>();
+            }
+        }
     }
 }

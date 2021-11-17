@@ -103,5 +103,40 @@ namespace PresentacionEscritorio
             btnPublicarComentario.Visible = false;
             ActualizarPost();
         }
+
+        private void ActualizarComentarios(int idPost)
+        {
+            List<Comentario> comentarios = accesoDatos.VerComentarios(idPost);
+            DataTable dataTable = new DataTable();
+
+            dataTable.Columns.Add("Nickname", typeof(string));
+            dataTable.Columns.Add("FechaPublicacion", typeof(DateTime));
+            dataTable.Columns.Add("Contenido", typeof(string));
+
+            foreach (Comentario c in comentarios)
+            {
+                DataRow row = dataTable.NewRow();
+
+                row[0] = c.Nickname;
+                row[1] = c.Publicacion;
+                row[2] = c.Contenido;
+
+                dataTable.Rows.Add(row);
+            }
+            dgvComentarios.DataSource = dataTable;
+        }
+
+        private void btnVerComentarios_Click(object sender, EventArgs e)
+        {
+            if (dgvPosts.SelectedRows.Count > 0)
+            {
+                int postSeleccionadoComentarios = dgvPosts.CurrentRow.Index;
+                ActualizarComentarios(Posts[postSeleccionadoComentarios].Idpost);
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un Post");
+            }
+        }
     }
 }
