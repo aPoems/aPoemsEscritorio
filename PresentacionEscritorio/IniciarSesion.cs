@@ -39,5 +39,10 @@ namespace PresentacionEscritorio
                 Program.bienvenida.Show();
             }
         }
+
+        private void IniciarSesion_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            //Application.Exit();
+        }
     }
 }

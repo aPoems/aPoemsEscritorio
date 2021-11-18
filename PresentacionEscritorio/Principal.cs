@@ -138,5 +138,10 @@ namespace PresentacionEscritorio
                 MessageBox.Show("Seleccione un Post");
             }
         }
+
+        private void Principal_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            //Application.Exit();
+        }
     }
 }

@@ -67,13 +67,17 @@ namespace PresentacionEscritorio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(469, 218);
             this.Controls.Add(this.btnRegistrarme);
             this.Controls.Add(this.btnIniciarSesion);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
             this.Name = "Bienvenida";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bienvenida";
             this.Activated += new System.EventHandler(this.Bienvenida_Activated);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Bienvenida_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

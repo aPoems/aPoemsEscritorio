@@ -152,6 +152,7 @@ namespace PresentacionEscritorio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(840, 457);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvComentarios);
@@ -164,8 +165,11 @@ namespace PresentacionEscritorio
             this.Controls.Add(this.btnPublicarPost);
             this.Controls.Add(this.dgvPosts);
             this.Controls.Add(this.lblPost);
+            this.MaximizeBox = false;
             this.Name = "Principal";
-            this.Text = "Principal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "aPoems";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Principal_FormClosed);
             this.Load += new System.EventHandler(this.Principal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPosts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvComentarios)).EndInit();

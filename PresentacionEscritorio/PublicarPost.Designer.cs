@@ -65,12 +65,16 @@ namespace PresentacionEscritorio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(409, 214);
             this.Controls.Add(this.btnPublicarPost);
             this.Controls.Add(this.txtContenido);
             this.Controls.Add(this.label1);
+            this.MinimizeBox = false;
             this.Name = "PublicarPost";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PublicarPost";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PublicarPost_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

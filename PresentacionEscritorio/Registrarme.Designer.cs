@@ -118,6 +118,7 @@ namespace PresentacionEscritorio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(398, 235);
             this.Controls.Add(this.btnRegistrarme);
             this.Controls.Add(this.dtFechaNacimiento);
@@ -128,8 +129,11 @@ namespace PresentacionEscritorio
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
             this.Name = "Registrarme";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registrarme";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Registrarme_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

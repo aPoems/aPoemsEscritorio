@@ -35,5 +35,10 @@ namespace PresentacionEscritorio
         {
             
         }
+
+        private void Bienvenida_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

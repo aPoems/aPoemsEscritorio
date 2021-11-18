@@ -27,5 +27,10 @@ namespace PresentacionEscritorio
             MessageBox.Show(mensaje);            
             this.Close();
         }
+
+        private void PublicarPost_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            //Application.Exit();
+        }
     }
 }
